@@ -18,6 +18,12 @@ This document provides an overview of the Task Management API, including endpoin
 - **Method**: POST
 - **Description**: Allows users to log in by providing a username and password. Returns JWT tokens for authentication.
 
+#### Refresh Token
+
+- **URL**: `/api/token/refresh/`
+- **Method**: POST
+- **Description**: Allows users to get a new access token by providing a valid refresh token.
+
 ### Task Management Endpoints
 
 #### List and Create Tasks
