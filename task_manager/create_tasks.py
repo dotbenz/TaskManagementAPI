@@ -1,33 +1,35 @@
+# populate_tasks.py
+
 import os
 import django
+from django.utils import timezone
 from faker import Faker
+from tasks.models import Task
+from django.contrib.auth import get_user_model
 
-# Set up the Django environment
+# Set up Django environment
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task_manager.settings')
 django.setup()
 
-from tasks.models import Task, User
-from django.utils import timezone
+def create_tasks(num_tasks):
+    fake = Faker()
+    User = get_user_model()
 
-fake = Faker()
+    # Create tasks
+    for _ in range(num_tasks):
+        user = User.objects.order_by('?').first()
+        title = fake.sentence()
+        description = fake.paragraph()
+        done = fake.boolean()
+        created_at = timezone.now()
+        updated_at = created_at
 
-# Assuming you have at least one user in your database
-user = User.objects.first()
-if not user:
-    print("No users found in the database. Please create a user first.")
-    exit()
+        Task.objects.create(user=user, title=title, description=description, done=done, created_at=created_at, updated_at=updated_at)
 
-tasks = []
-for _ in range(200):
-    task = Task(
-        title=fake.sentence(nb_words=6),
-        description=fake.text(max_nb_chars=200),
-        done=fake.boolean(),
-        user=user,
-        created_at=timezone.now(),
-        updated_at=timezone.now()
-    )
-    tasks.append(task)
+def main():
+    num_tasks = 200
+    create_tasks(num_tasks)
+    print(f"{num_tasks} tasks created successfully.")
 
-Task.objects.bulk_create(tasks)
-print("200 tasks created successfully!")
+if __name__ == '__main__':
+    main()
