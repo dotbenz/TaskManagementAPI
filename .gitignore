@@ -12,15 +12,9 @@ __pycache__/
 *.db
 *.sqlite3
 
-# ENV
-.env
-*.env
-
-# Node modules (if using Node.js for front-end development)
-node_modules/
 
 # Virtual environment
-myenv/
+myvirt/
 venv/
 env/
 env.bak/
