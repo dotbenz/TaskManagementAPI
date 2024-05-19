@@ -20,67 +20,6 @@ env/
 env.bak/
 *.bak
 
-# VS Code
-.vscode/
-
-# PyCharm
-.idea/
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-ehthumbs.db
-*.stackdump
-
-# Visual Studio
-.vscode/
-.vs/
-*.vcxproj*
-*.vcxproj.filters
-
-# Local history
-local_history/
-
-# Coverage reports
-htmlcov/
-.tox/
-.coverage
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
-nosetests.xml
-coverage/
-
-# MyPy
-.mypy_cache/
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Other files and directories
-*.sublime-workspace
-*.sublime-project
-*.swo
-*.swp
-*.swn
-*.orig
-*.bak
-*.swp
-*.swo
-*~
-.project
-.idea/
-__pycache__/
-*.py[cod]
-
 # Ignore all other hidden files and folders
 .*
 !.gitignore
