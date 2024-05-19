@@ -69,11 +69,4 @@ To stream real-time data updates, we utilize Django Channels, a library that ext
 4. **Configure ASGI**: Configure ASGI application in `task_manager/asgi.py`.
 5. **Connect Frontend**: Connect the frontend to the WebSocket server to receive real-time updates.
 
-## Additional Notes
-
-- Ensure proper error handling and validation for all endpoints.
-- Implement proper authentication and authorization mechanisms to secure the endpoints.
-- Document any additional configuration or setup steps required for deployment.
-- Provide clear and concise documentation comments within the codebase to aid developers in understanding the implementation details.
-
 By following these guidelines, future developers can easily understand and work with the codebase to maintain and extend the task management system.
